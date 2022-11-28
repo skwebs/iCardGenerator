@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta manisharset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icard:Canvas</title>
+    <style>
+        canvas {
+            /* border: thin solid; */
+            background-color: rgba(255, 204, 204, 0.315);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <script src="./student.json"></script>
+    <script src="./script.js"></script>
+    <script>
+        const data = [
+            {
+                "name": "Elion",
+                "father": "David Woods",
+                "std": "Play",
+                "roll": 01,
+                "stuImgSrc": "./stu.jpg"
+            },
+            {
+                "name": "Albert",
+                "father": "David",
+                "std": "Play",
+                "roll": 01,
+                "stuImgSrc": "./stu1.jpg"
+            },
+            {
+                "name": "Watson",
+                "father": "Michalle",
+                "std": "Nursery",
+                "roll": 01,
+                "stuImgSrc": "./stu2.jpg"
+            },
+            {
+                "name": "Angle",
+                "father": "Robin",
+                "std": "Eleventh",
+                "roll": 01,
+                "stuImgSrc": "./stu3.png"
+            }
+        ]
+
+
+        window.addEventListener("DOMContentLoaded", function () {
+            // const data = "./student.json";
+            data.map((d, i) => (
+
+                createICard(d)
+            ))
+            console.log(data);
+
+        });
+
+    </script>
+</body>
+
+</html>
